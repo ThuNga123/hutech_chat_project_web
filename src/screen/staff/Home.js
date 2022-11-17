@@ -1,6 +1,5 @@
 import React from 'react'
-import '../../styles/HomeStaff.css'
-import '../../handle/HomeStaff.js'
+import HomeStaff from '../../styles/HomeStaff.css'
 
 function Home() {
   var tabs = document.getElementById('tabTitle')
@@ -30,41 +29,47 @@ function Home() {
         <div className="profile">
           <div className="mainBox">
             <text className="profile-Name">Nguyễn Văn A</text>
-            {/* <div className="profile-Status">
-              <FontAwesomeIcon icon="fa-solid fa-user" /> <i>Online</i>
+            <div className="profile-Status">
+              <i class="fa fa-check-circle"> &nbsp;</i>
+              Online
             </div>
             <img
               src="https://bootdey.com/img/Content/avatar/avatar1.png"
               alt=""
               className="profile-Img"
             ></img>
-            ç
-            <div className="profile-Label">
-              <span className="label label-danger">Nhân viên</span>
-            </div>{' '}
+            <button className="profile-Button">
+              <span className="label">Nhân viên</span>
+            </button>
             <hr />
             <div className="profile-Details">
-              <ul>
-                <li className="title">
-                  Họ và tên:
-                  <span className="value"> Nguyễn Văn A</span>
-                </li>
-                <li className="title">
-                  Số điện thoại:
-                  <span className="value"> 0987654456789</span>
-                </li>
-                <li className="title">
-                  Email:
-                  <span className="value"> nguyenvana@gmail.com</span>
-                </li>
-                <li className="title ">
-                  Địa chỉ:
-                  <span className="value"> 123 abc, ddd, Tp.HCM</span>
-                </li>
+              <ul className="title ">
+                <i class="fa fa-user"> &nbsp;</i>
+                Họ và tên:
+                <span className="value"> Nguyễn Văn A</span>
               </ul>
-            </div> */}
+              <ul className="title ">
+                <i class="fa fa-phone"> &nbsp;</i>
+                Số điện thoại:
+                <span className="value"> 0987654456789</span>
+              </ul>
+              <ul className="title ">
+                <i class="fa fa-envelope"> &nbsp;</i>
+                Email:
+                <span className="value"> nguyenvana@gmail.com</span>
+              </ul>
+              <ul className="title ">
+                <i class="fa fa-home"> &nbsp;</i>
+                Địa chỉ:
+                <span className="value"> 123 abc, ddd, Tp.HCM</span>
+              </ul>
+            </div>
             <hr />
-            <div className="logOut">Đăng xuất</div>
+            <div className="logOut">
+              {' '}
+              <i class="fa fa-sign-out"> &nbsp;</i>
+              Đăng xuất
+            </div>
           </div>
         </div>
 
