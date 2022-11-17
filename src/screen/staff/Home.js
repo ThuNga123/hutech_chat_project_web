@@ -76,26 +76,31 @@ function Home() {
         <div className="content">
           <div className="mainBox">
             <div className="info">
-              <div className="panel">THONG TIN BENH NHAN</div>
               <div className="user-Details">
+                <div className="panel">THONG TIN BENH NHAN</div>
+                <hr />
                 <div className="user-left">
-                  <div className="title">
+                  <div className="title-v1">
+                    <i class="fa fa-user"> &nbsp;</i>
                     Họ và tên:
-                    <span className="value"> Nguyễn Văn A</span>
+                    <span className="value-v1"> Nguyễn Văn A</span>
                   </div>
-                  <div className="title">
+                  <div className="title-v1">
+                    <i class="fa fa-phone"> &nbsp;</i>
                     Số điện thoại:
-                    <span className="value"> 0987654456789</span>
+                    <span className="value-v1"> 0987654456789</span>
                   </div>
                 </div>
                 <div className="user-right">
-                  <div className="title">
+                  <div className="title-v1">
+                    <i class="fa fa-envelope"> &nbsp;</i>
                     Email:
-                    <span className="value"> nguyenvana@gmail.com</span>
+                    <span className="value-v1"> nguyenvana@gmail.com</span>
                   </div>
-                  <div className="title">
+                  <div className="title-v1">
+                    <i class="fa fa-home"> &nbsp;</i>
                     Địa chỉ:
-                    <span className="value"> 123 abc, ddd, Tp.HCM</span>
+                    <span className="value-v1"> 123 abc, ddd, Tp.HCM</span>
                   </div>
                 </div>
               </div>

@@ -44,21 +44,23 @@ body{
 
 .profile-Status{
     color: #8dc859;
-    padding-top: 15px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-size: small;
 }
 
 .profile-Img {
+    margin-left: 20px;
+
 	border: 1px solid #e1e1e1;
-    height: 300px;
-    width: 280px;
+    height: 240px;
+    width: 240px;
     text-align: center;
 }
 
 .profile-Button{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-color: aliceblue;
     border-radius: 3px;
     height: 40px;
@@ -83,17 +85,28 @@ hr{
 
 .profile-Details{
     font-size: 14px;
-    margin-top: -15px;
+    margin-top: -10px;
     margin-left: -35px;
 }
 
 .title{
-    padding-top: 15px;
+    padding-top: 10px;
     /* font-weight: bold; */
 }
 
+.title-v1{
+    padding-top: 20px;
+    /* font-weight: bold; */
+    
+}
+
 .value{
-    color: blue;
+    color: #34d1be;
+    font-weight: bold;
+}
+
+.value-v1{
+    color: black;
 }
 
 .logOut{
@@ -110,8 +123,8 @@ hr{
 
 .content{
     display: inline-block;
-    width: 59%;
-    margin-left: 50px;
+    width: 72%;
+    margin-left: 30px;
     margin-top: 40px;
     height:fit-content;
     background-color: antiquewhite;
@@ -119,12 +132,13 @@ hr{
 
 .info{
     height: 30%;
-    background-color: red;
+    background-color:aquamarine;
 }
 
 .panel{
     font-size: x-large;
     text-align: center;
+    padding-top: 30px;
 }
 
 .user-Details{
@@ -133,6 +147,7 @@ hr{
     margin-top: -15px;
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 40px;
 }
 
 .user-left{
@@ -151,4 +166,12 @@ hr{
 .tabs{
     height: fit-content;
     background-color: gray;
+}
+
+.itemTitle.active {
+    background-color: tomato;
+}
+
+.active {
+    background-color: #8dc859;
 }
