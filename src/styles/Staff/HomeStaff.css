@@ -28,7 +28,7 @@ body{
 
 .mainBox{
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     margin-left: 20px;
     margin-right: 20px;
     flex-direction: column;
@@ -111,14 +111,15 @@ hr{
 
 .logOut{
     background-color: #77ab49;
-    height: 30px;
+    height: 40px;
     text-align: center;
-    margin-top: 20px;
-    padding-top: 10px;
+    margin-top: 10px;
+    padding-top: 3px;
     color: white;
     border-radius: 5px;
     width: 140px;
     margin-left: 70px;
+    font-size: 15px;
 }
 
 .content{
@@ -175,3 +176,64 @@ hr{
 .active {
     background-color: #8dc859;
 }
+
+/* Tab Xac Nhan Lich Kham Cua Benh Nhan */
+
+/* Tab lich su chat voi benh nhan */
+
+.chat-History{
+    margin-top: 20px;
+}
+
+.room-Chat{
+    background-color: lightgray;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.room-Title{
+    background-color: lightgray;
+    border-radius: 10px;
+    flex-direction: row;
+    display: flex;
+    font-size: 15px;
+}
+
+.room-Icons{
+    text-align: center;
+    width: 10%;
+
+    padding-top: 10px;
+    height: 50px;
+}
+
+.room-Name{
+    text-align: left;
+    width: 60%;
+
+    padding-top: 10px;
+    height: 50px;
+}
+
+.room-Time{
+    text-align: right;
+    width: 25%;
+
+    padding-top: 10px;
+    height: 50px;
+}
+
+.room-LastMess{
+    background-color: #34d1be;
+    margin-left: 90px;
+    margin-right: 200px;
+    margin-top: -30px;
+    font-size: 13px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+

@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './App'
-import HomeStaff from '../src/styles/HomeStaff.css'
+import HomeStaff from '../src/styles/Staff/HomeStaff.css'
 import reportWebVitals from './reportWebVitals'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
