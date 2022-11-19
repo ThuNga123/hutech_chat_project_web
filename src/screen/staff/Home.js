@@ -4,30 +4,11 @@ import ReactDOM from 'react-dom'
 import { Tabs, Tab, Content } from '../staff/tab.js'
 import '../../styles/Staff/tab.css'
 import ChatBody from '../../components/Staff/ChatBody'
+import { confirmAlert } from 'react-confirm-alert'
 
 function Home() {
-  //   var tabs = document.getElementById('tabTitle')
-  //   var contents = document.getElementById('tabContent')
-
-  //   var itemTitle = document.getElementsByClassName('itemTitle')
-  //   var itemContent = document.getElementsByClassName('itemContent')
-  //   for (var i = 0; i < itemTitle.length; i++) {
-  //     itemTitle[i].addEventListener('click', function () {
-  //       var current = document.getElementsByClassName('active')
-  //       console.log(current)
-  //       current[0].className = current[0].className.replace(' active', '')
-  //       this.className += ' active'
-  //     })
-  //   }
-
-  //   for (var i = 0; i < itemContent.length; i++) {
-  //     itemContent[i].addEventListener('click', function () {
-  //       var current = document.getElementsByClassName('active')
-  //       current[0].className = current[0].className.replace(' active', '')
-  //       this.className += ' active'
-  //     })
-  //   }
   const [active, setActive] = useState(0)
+  const [isView, setView] = useState([])
   const handleClick = (e) => {
     const index = parseInt(e.target.id, 0)
     if (index !== active) {
@@ -60,6 +41,40 @@ function Home() {
       time: ' 2022/11/11 12:08',
     },
   ]
+
+  const userInfo = [
+    {
+      userid: '1',
+      name: 'Nguyen Van B',
+      sex: 'Nam',
+      phone: '09876545678',
+      email: 'nguyenb@gmail.com',
+      date: '2022/11/11',
+      time: '9:30',
+    },
+
+    {
+      userid: '2',
+      name: 'Nguyen Van C',
+      sex: 'Nam',
+      phone: '09876545356786543',
+      email: 'nguyenc@gmail.com',
+      date: '2022/11/11',
+      time: '13:30',
+    },
+
+    {
+      userid: '3',
+      name: 'Nguyen Thi C',
+      sex: 'Nu',
+      phone: '0134567543',
+      email: 'nguyenc@gmail.com',
+      date: '2022/11/14',
+      time: '10:00',
+    },
+  ]
+
+  // const [status, setStatus] = useState(false)
 
   return (
     <div className="homeStaff">
@@ -110,39 +125,67 @@ function Home() {
             </button>
           </div>
         </div>
-
         <div className="content">
           <div className="mainBox">
-            <div className="info">
-              <div className="user-Details">
-                <div className="panel">THONG TIN BENH NHAN</div>
-                <hr />
-                <div className="user-left">
-                  <div className="title-v1">
-                    <i class="fa fa-user"> &nbsp;</i>
-                    Họ và tên:
-                    <span className="value-v1"> Nguyễn Văn A</span>
+            {isView.length != 0 ? (
+              <div className="info">
+                {console.log(isView)}
+                <div className="user-Details">
+                  <div className="header">
+                    <div className="panel">THONG TIN BENH NHAN</div>
+                    <button
+                      onClick={() => {
+                        setView([])
+                      }}
+                      className="exit"
+                    >
+                      X
+                    </button>
                   </div>
-                  <div className="title-v1">
-                    <i class="fa fa-phone"> &nbsp;</i>
-                    Số điện thoại:
-                    <span className="value-v1"> 0987654456789</span>
+                  <hr />
+                  <div className="user-left">
+                    <div className="title-v1">
+                      <i class="fa fa-user"> &nbsp;</i>
+                      Họ và tên:
+                      <span className="value-v1"> {isView.name}</span>
+                    </div>
+                    <div className="title-v1">
+                      <i class="fa fa-phone"> &nbsp;</i>
+                      Số điện thoại:
+                      <span className="value-v1"> {isView.phone}</span>
+                    </div>
+                    <div className="title-v1">
+                      <i class="fa fa-phone"> &nbsp;</i>
+                      Ngày khám:
+                      <span className="value-v1"> {isView.date}</span>
+                    </div>
                   </div>
-                </div>
-                <div className="user-right">
-                  <div className="title-v1">
-                    <i class="fa fa-envelope"> &nbsp;</i>
-                    Email:
-                    <span className="value-v1"> nguyenvana@gmail.com</span>
+                  <div className="user-right">
+                    <div className="title-v1">
+                      <i class="fa fa-envelope"> &nbsp;</i>
+                      Email:
+                      <span className="value-v1"> {isView.email}</span>
+                    </div>
+                    <div className="title-v1">
+                      <i class="fa fa-home"> &nbsp;</i>
+                      Địa chỉ khám:
+                      <span className="value-v1"> 10 CMT8, Tân Bình</span>
+                    </div>
+                    <div className="title-v1">
+                      <i class="fa fa-home"> &nbsp;</i>
+                      Thời gian:
+                      <span className="value-v1"> {isView.time}</span>
+                    </div>
                   </div>
-                  <div className="title-v1">
-                    <i class="fa fa-home"> &nbsp;</i>
-                    Địa chỉ:
-                    <span className="value-v1"> 123 abc, ddd, Tp.HCM</span>
-                  </div>
+                  {false ? (
+                    <div className="btn">
+                      <button className="confirm">Xác nhận</button>
+                      <button className="cancel">Huỷ bỏ</button>
+                    </div>
+                  ) : null}
                 </div>
               </div>
-            </div>
+            ) : null}
 
             <div id="tabs">
               <Tabs>
@@ -151,65 +194,47 @@ function Home() {
                   Đặt lịch
                 </Tab>
 
-                <Tab onClick={handleClick} active={active === 1} id={1}>
-                  <i class="fa fa-comment"> &nbsp;</i>
-                  Lịch sử
-                </Tab>
-
                 <Tab onClick={handleClick} active={active === 2} id={2}>
                   <i class="fa fa-comments"> &nbsp;</i>
                   Tư vấn
                 </Tab>
               </Tabs>
               <>
-                <Content active={active === 0}>
-                  <div className="mainBox">
-                    <tr>
-                      <td class="text-center">
-                        <i class="fa fa-comment"></i>
-                      </td>
-                      <td>
-                        John Doe posted a comment in{' '}
-                        <a href="#">Avengers Initiative</a> project.
-                      </td>
-                      <td>2014/08/08 12:08</td>
-                    </tr>
-                  </div>
-                </Content>
-
-                {chatRoom.map((roomDetail) => (
-                  <Content active={active === 1}>
-                    <div className="chat-History">
-                      <div className="room-Chat">
-                        <div className="room-Title">
-                          <div className="room-Icons">
-                            <i class="fa fa-comment"></i>
-                          </div>
-                          <div className="room-Name">{roomDetail.room}</div>
-                          <div className="room-Time">{roomDetail.time}</div>
-                        </div>
-                        <div className="room-LastMess">
-                          {roomDetail.lastMess}
-                        </div>
+                {userInfo.map((info) => (
+                  <Content active={active === 0}>
+                    <div className="mainBox">
+                      <div className="user-info">
+                        <tr>
+                          <td class="text-center">
+                            <i class="fa fa-info-circle"></i>
+                          </td>
+                          <td>
+                            {' '}
+                            &nbsp; Một đăng ký khám bệnh mới từ{' '}
+                            {/* <a href="#">{info.name}.</a> */}
+                            {/* <a href="#" onClick={Test}>
+                              {info.name}.
+                            </a> */}
+                            <button onClick={() => setView(info)}>
+                              <a href="#">{info.name}.</a>
+                              {/* {info.name} */}
+                            </button>
+                          </td>
+                          <td className="time-">
+                            &nbsp; Thời gian {info.time} {info.date}
+                          </td>
+                        </tr>
                       </div>
                     </div>
                   </Content>
                 ))}
+
                 <Content active={active === 2}>
                   <div className="">
                     <ChatBody />
                   </div>
                 </Content>
               </>
-
-              {/* <div id="tabTitle">
-                <button className="itemTitle active">active</button>
-                <button className="itemTitle">friend</button>
-              </div>
-              <div id="tabContent">
-                <div className="itemContent">abc</div>
-                <div className="itemContent">dcf</div>
-              </div> */}
             </div>
           </div>
         </div>
