@@ -2,8 +2,7 @@ import React from 'react'
 import '../../styles/Authen/signIn.css'
 import image from '../../assets/images/background.png'
 import Home from '../staff/Home'
-import { Link } from 'react-router-dom'
-import { Routes, Route, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 function SignIn() {
   const navigate = useNavigate()
