@@ -2,19 +2,24 @@ import './App.css'
 import Home from './screen/staff/Home.js'
 import '../src/styles/Staff/HomeStaff.css'
 import Nav from '../src/components/Staff/Nav'
+import SignIn from './screen/authen/SignIn'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 
 function App() {
-  return (
-    <div>
-      <Nav />
-      <Home />
-    </div>
+  const navigate = useNavigate()
 
-    //   <div className="__main">
-    //     <Nav />
-    //     <ChatBody />
-    //   </div>
-    //
+  const navigateSignIn = () => {
+    navigate('/')
+  }
+
+  const navigateToHome = () => {
+    navigate('/home')
+  }
+  return (
+    <Routes>
+      <Route path="/" element={<SignIn />} />
+      <Route path="/home" element={<Home />} />
+    </Routes>
   )
 }
 

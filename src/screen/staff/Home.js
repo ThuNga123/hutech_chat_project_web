@@ -4,9 +4,10 @@ import ReactDOM from 'react-dom'
 import { Tabs, Tab, Content } from '../staff/tab.js'
 import '../../styles/Staff/tab.css'
 import ChatBody from '../../components/Staff/ChatBody'
-import { confirmAlert } from 'react-confirm-alert'
+import { useNavigate } from 'react-router-dom'
 
 function Home() {
+  const navigate = useNavigate()
   const [active, setActive] = useState(0)
   const [isView, setView] = useState([])
   const handleClick = (e) => {
@@ -15,32 +16,6 @@ function Home() {
       setActive(index)
     }
   }
-
-  const chatRoom = [
-    {
-      roomId: '1',
-      room: 'Nguyen Van B',
-      lastMess:
-        'A string is any series of characters that are interpreted literally by a script. For example. A string is any series of characters that are interpreted literally by a script. For example',
-      time: ' 2022/11/11 12:08',
-    },
-
-    {
-      roomId: '2',
-      room: 'Nguyen Van C',
-      lastMess:
-        'A string is any series of characters that are interpreted literally by a script. For example. A string is any series of characters that are interpreted literally by a script. For example',
-      time: ' 2022/11/11 12:08',
-    },
-
-    {
-      roomId: '3',
-      room: 'Nguyen Van D',
-      lastMess:
-        'A string is any series of characters that are interpreted literally by a script. For example. A string is any series of characters that are interpreted literally by a script. For example',
-      time: ' 2022/11/11 12:08',
-    },
-  ]
 
   const userInfo = [
     {
@@ -73,8 +48,6 @@ function Home() {
       time: '10:00',
     },
   ]
-
-  // const [status, setStatus] = useState(false)
 
   return (
     <div className="homeStaff">
@@ -118,8 +91,12 @@ function Home() {
               </ul>
             </div>
             <hr />
-            <button className="logOut">
-              {' '}
+            <button
+              className="logOut"
+              onClick={() => {
+                navigate('/')
+              }}
+            >
               <i class="fa fa-sign-out"> &nbsp;</i>
               Đăng xuất
             </button>
@@ -211,14 +188,9 @@ function Home() {
                           <td>
                             {' '}
                             &nbsp; Một đăng ký khám bệnh mới từ{' '}
-                            {/* <a href="#">{info.name}.</a> */}
-                            {/* <a href="#" onClick={Test}>
-                              {info.name}.
-                            </a> */}
-                            <button onClick={() => setView(info)}>
+                            <a onClick={() => setView(info)}>
                               <a href="#">{info.name}.</a>
-                              {/* {info.name} */}
-                            </button>
+                            </a>
                           </td>
                           <td className="time-">
                             &nbsp; Thời gian {info.time} {info.date}

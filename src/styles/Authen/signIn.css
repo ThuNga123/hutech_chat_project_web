@@ -1,0 +1,58 @@
+.main{
+    position: absolute;
+    margin-top: 120px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    margin-left: 120px;
+
+    height: 550px;
+    width: 1200px;
+    }
+
+.form-input{
+    text-align: right;
+    padding-top: 100px;
+    padding-right: 120px;
+}
+
+.header{
+    font-size: xx-large;
+    padding-bottom: 50px;
+    color: #00507c;
+    font-weight: bold;
+}
+
+.email{
+    padding-bottom: 40px;
+    margin-left: 730px;
+    flex-direction: column;
+}
+
+.input{
+    display:list-item;
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.forgot{
+    margin-top: -15px;
+    font-size: small;
+    text-align: right;
+    padding-bottom: 30px;
+    font-weight: bold;
+    padding-right: 40px;
+}
+
+.submit{
+    font-size: medium;
+    border-radius: 20px;
+    height: 40px;
+    width: 120px;
+    background-color: #00507c;
+    color: white;
+    margin-left: 100px;
+    margin-right: 120px;
+ }
