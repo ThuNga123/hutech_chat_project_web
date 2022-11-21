@@ -35,7 +35,7 @@ function SignIn() {
           </div>
           <input
             onClick={() => {
-              navigate('/home')
+              navigate('/homeStaff')
             }}
             className="submit"
             type="submit"
