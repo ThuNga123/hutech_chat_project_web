@@ -7,6 +7,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import HomeAdmin from '../screen/admin/HomeAdmin'
 import Test from '../screen/admin/Test'
 import Sidebar from '../components/Admin/Sidebar'
+import App from '../App'
 
 function AppNavigator() {
   const navigate = useNavigate()
