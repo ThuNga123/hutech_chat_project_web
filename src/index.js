@@ -8,10 +8,12 @@ import {
   Outlet,
   createRoutesFromElements,
 } from 'react-router-dom'
-import Products from './screen/admin/Products'
+import Patient from './screen/admin/Patient'
 import HomeAdmin from './screen/admin/HomeAdmin'
-import Reports from './screen/admin/Reports'
 import Navbar from './components/Admin/Navbar'
+import Services from './screen/admin/Services'
+import Book from './screen/admin/Book'
+import Personnel from './screen/admin/Personnel'
 import './App.css'
 
 const AppLayout = () => (
@@ -40,12 +42,20 @@ const router = createBrowserRouter([
         element: <HomeAdmin />,
       },
       {
-        path: 'products',
-        element: <Products />,
+        path: 'services',
+        element: <Services />,
       },
       {
-        path: 'reports',
-        element: <Reports />,
+        path: 'patients',
+        element: <Patient />,
+      },
+      {
+        path: 'personnel',
+        element: <Personnel />,
+      },
+      {
+        path: 'book',
+        element: <Book />,
       },
     ],
   },

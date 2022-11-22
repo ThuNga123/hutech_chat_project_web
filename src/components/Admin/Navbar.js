@@ -3,7 +3,7 @@ import * as FaIcons from 'react-icons/fa'
 import * as AiIcons from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import { SidebarData } from './SidebarData'
-import '../../styles/Admin/Navbar.css'
+import '../../styles/Admin/navBar.css'
 import { IconContext } from 'react-icons'
 
 function Navbar() {
@@ -22,7 +22,8 @@ function Navbar() {
           <ul className="nav-menu-items" onClick={showSidebar}>
             <li className="navbar-toggle">
               <Link to="#" className="menu-bars">
-                <AiIcons.AiOutlineClose />
+                {/* <AiIcons.AiOutlineClose /> */}
+                <div className="text">QUẢN LÝ</div>
               </Link>
             </li>
             {SidebarData.map((item, index) => {
