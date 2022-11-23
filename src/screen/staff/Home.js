@@ -69,26 +69,30 @@ function Home() {
             </button>
             <hr />
             <div className="profile-Details">
-              <ul className="title ">
-                <i class="fa fa-user"> &nbsp;</i>
-                Họ và tên:
-                <span className="value">Nguyễn Văn A</span>
-              </ul>
-              <ul className="title ">
-                <i class="fa fa-phone"> &nbsp;</i>
-                Số điện thoại:
-                <span className="value">0987654456789</span>
-              </ul>
-              <ul className="title ">
-                <i class="fa fa-envelope"> &nbsp;</i>
-                Email:
-                <span className="value">nguyenvana@gmail.com</span>
-              </ul>
-              <ul className="title ">
-                <i class="fa fa-home"> &nbsp;</i>
-                Địa chỉ:
-                <span className="value">123 abc, ddd, Tp.HCM</span>
-              </ul>
+              <div className="left">
+                <ul className="title ">
+                  <i class="fa fa-user"> &nbsp;</i>
+                  Họ và tên:
+                </ul>
+                <ul className="title ">
+                  <i class="fa fa-phone"> &nbsp;</i>
+                  SDT:
+                </ul>
+                <ul className="title ">
+                  <i class="fa fa-envelope"> &nbsp;</i>
+                  Email:
+                </ul>
+                <ul className="title ">
+                  <i class="fa fa-home"> &nbsp;</i>
+                  Địa chỉ:
+                </ul>
+              </div>
+              <div className="right">
+                <ul className="title ">Nguyễn Văn A</ul>
+                <ul className="title ">0987654456789</ul>
+                <ul className="title ">nguyenvana@gmail.com</ul>
+                <ul className="title ">123 abc, ddd, Tp.HCM</ul>
+              </div>
             </div>
             <hr />
             <button
@@ -121,37 +125,47 @@ function Home() {
                   </div>
                   <hr />
                   <div className="user-left">
-                    <div className="title-v1">
-                      <i class="fa fa-user"> &nbsp;</i>
-                      Họ và tên:
-                      <span className="value-v1"> {isView.name}</span>
+                    <div className="left">
+                      <div className="title-v1">
+                        <i class="fa fa-user"> &nbsp;</i>
+                        Họ và tên:
+                      </div>
+                      <div className="title-v1">
+                        <i class="fa fa-phone"> &nbsp;</i>
+                        Số điện thoại:
+                      </div>
+                      <div className="title-v1">
+                        <i class="	far fa-calendar-alt"> &nbsp;</i>
+                        Ngày khám:
+                      </div>
                     </div>
-                    <div className="title-v1">
-                      <i class="fa fa-phone"> &nbsp;</i>
-                      Số điện thoại:
-                      <span className="value-v1"> {isView.phone}</span>
-                    </div>
-                    <div className="title-v1">
-                      <i class="far fa-calendar-alt"> &nbsp;</i>
-                      Ngày khám:
-                      <span className="value-v1"> {isView.date}</span>
+                    <div className="right">
+                      <div className="title-v1">{isView.name}</div>
+                      <div className="title-v1">{isView.phone}</div>
+                      <div className="title-v1">{isView.date}</div>
                     </div>
                   </div>
                   <div className="user-right">
-                    <div className="title-v1">
-                      <i class="fa fa-envelope"> &nbsp;</i>
-                      Email:
-                      <span className="value-v1"> {isView.email}</span>
+                    <div className="left">
+                      <div className="title-v1">
+                        <i class="fa fa-envelope"> &nbsp;</i>
+                        Email:
+                      </div>
+                      <div className="title-v1">
+                        <i class="fa fa-home"> &nbsp;</i>
+                        Địa chỉ khám:
+                      </div>
+                      <div className="title-v1">
+                        <i class="far fa-clock"> &nbsp;</i>
+                        Thời gian:
+                      </div>
                     </div>
-                    <div className="title-v1">
-                      <i class="fa fa-home"> &nbsp;</i>
-                      Địa chỉ khám:
-                      <span className="value-v1"> 10 CMT8, Tân Bình</span>
-                    </div>
-                    <div className="title-v1">
-                      <i class="far fa-clock"> &nbsp;</i>
-                      Thời gian:
-                      <span className="value-v1"> {isView.time}</span>
+                    <div className="right">
+                      <div className="title-v1">{isView.email}</div>
+                      <div className="title-v1">
+                        10 CMT8 phường 10, Tân Bình
+                      </div>
+                      <div className="title-v1">{isView.time}</div>
                     </div>
                   </div>
                   {false ? (
