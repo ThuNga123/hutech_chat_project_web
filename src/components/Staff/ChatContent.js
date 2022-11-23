@@ -138,7 +138,7 @@ export default class ChatContent extends Component {
             </button>
             <input
               type="text"
-              placeholder="Type a message here"
+              placeholder="Hãy để lại lời nhắn "
               onChange={this.onStateChange}
               value={this.state.msg}
             />

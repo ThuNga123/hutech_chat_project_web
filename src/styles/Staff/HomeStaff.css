@@ -34,13 +34,27 @@ body{
     flex-direction: column;
     background-color: white;
 }
+.sq{
+    flex-direction: row;
+}
+
+.sqs{
+    display: inline-block;
+    background-color:#e1e1e1;
+    height: 30px;
+    width: 15px;
+    margin-left: -25px;
+    margin-right: 18px;
+}
 
 .profile-Name{
+    display: inline-block;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     flex-direction: column;
     font-size: 20px;
     font-weight: bold;
     font-family: Arial;
+    padding-top: -80px;
 }
 
 .profile-Status{

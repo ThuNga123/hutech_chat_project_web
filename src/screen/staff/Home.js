@@ -54,7 +54,10 @@ function Home() {
       <div className="table">
         <div className="profile">
           <div className="mainBox">
-            <text className="profile-Name">Nguyễn Văn A</text>
+            <div className="sq">
+              <div className="sqs"></div>
+              <text className="profile-Name">Nguyễn Văn A</text>
+            </div>
             <div className="profile-Status">
               <i class="fa fa-check-circle"> &nbsp;</i>
               Online
@@ -101,7 +104,7 @@ function Home() {
                 navigate('/')
               }}
             >
-              <i class="fa fa-sign-out"> &nbsp;</i>
+              <i class="fas fa-sign-out-alt"> &nbsp;</i>
               Đăng xuất
             </button>
           </div>
@@ -181,41 +184,12 @@ function Home() {
             <div id="tabs">
               <Tabs>
                 <Tab onClick={handleClick} active={active === 0} id={0}>
-                  <i class="fa fa-list"> &nbsp;</i>
-                  Đặt lịch
-                </Tab>
-
-                <Tab onClick={handleClick} active={active === 2} id={2}>
                   <i class="fa fa-comments"> &nbsp;</i>
                   Tư vấn
                 </Tab>
               </Tabs>
               <>
-                {userInfo.map((info) => (
-                  <Content active={active === 0}>
-                    <div className="mainBox">
-                      <div className="user-info">
-                        <tr>
-                          <td class="text-center">
-                            <i class="fa fa-info-circle"></i>
-                          </td>
-                          <td>
-                            {' '}
-                            &nbsp; Một đăng ký khám bệnh mới từ{' '}
-                            <a onClick={() => setView(info)}>
-                              <a href="#">{info.name}.</a>
-                            </a>
-                          </td>
-                          <td className="time-">
-                            &nbsp; Thời gian {info.time} {info.date}
-                          </td>
-                        </tr>
-                      </div>
-                    </div>
-                  </Content>
-                ))}
-
-                <Content active={active === 2}>
+                <Content active={active === 0}>
                   <div className="">
                     <ChatBody />
                   </div>
