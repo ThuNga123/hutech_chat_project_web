@@ -1,66 +1,16 @@
 import React from 'react'
-import { createRoot } from 'react-dom/client'
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-  Outlet,
-  createRoutesFromElements,
-} from 'react-router-dom'
-import Patient from './screen/admin/Patient'
-import HomeAdmin from './screen/admin/HomeAdmin'
-import Navbar from './components/Admin/Navbar'
-import Services from './screen/admin/Services'
-import Book from './screen/admin/Book'
-import Personnel from './screen/admin/Personnel'
-import './App.css'
+import ReactDOM from 'react-dom/client'
+import reportWebVitals from './reportWebVitals'
+import AppNavigator from '../src/router/staff'
 
-const AppLayout = () => (
-  <>
-    <Navbar />
-    <Outlet />
-  </>
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
+  <React.StrictMode>
+    <AppNavigator />
+  </React.StrictMode>,
 )
 
-// const router = createBrowserRouter(
-//   createRoutesFromElements(
-//     <Route element={<AppLayout />}>
-//       <Route path="/" element={<Home />} />
-//       <Route path="/products" element={<Products />} />
-//       <Route path="/reports" element={<Reports />} />
-//     </Route>
-//   )
-// );
-
-const router = createBrowserRouter([
-  {
-    element: <AppLayout />,
-    children: [
-      {
-        path: '/',
-        element: <HomeAdmin />,
-      },
-      {
-        path: 'services',
-        element: <Services />,
-      },
-      {
-        path: 'patients',
-        element: <Patient />,
-      },
-      {
-        path: 'personnel',
-        element: <Personnel />,
-      },
-      {
-        path: 'book',
-        element: <Book />,
-      },
-    ],
-  },
-])
-
-createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router} />,
-)
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals()

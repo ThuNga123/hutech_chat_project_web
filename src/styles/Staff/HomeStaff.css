@@ -193,7 +193,7 @@ hr{
 .exit{
     display: inline-block;
     width: 5%;
-}
+}  
 
 .user-Details{
     flex-direction: row;
@@ -203,7 +203,7 @@ hr{
     padding-right: 10px;
     padding-bottom: 40px;
 }
-
+ 
 .user-left{
     display: inline-block;
     width: 49%;
@@ -218,15 +218,8 @@ hr{
 .tabs{
     height: fit-content;
     background-color: #eeeeee;
-}
 
-/* .itemTitle.active {
-    background-color: tomato;
 }
-
-.active {
-    background-color: #8dc859;
-} */
 
 /* Tab Xac Nhan Lich Kham Cua Benh Nhan */
 
