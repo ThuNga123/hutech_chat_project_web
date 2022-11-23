@@ -72,22 +72,22 @@ function Home() {
               <ul className="title ">
                 <i class="fa fa-user"> &nbsp;</i>
                 Họ và tên:
-                <span className="value"> Nguyễn Văn A</span>
+                <span className="value">Nguyễn Văn A</span>
               </ul>
               <ul className="title ">
                 <i class="fa fa-phone"> &nbsp;</i>
                 Số điện thoại:
-                <span className="value"> 0987654456789</span>
+                <span className="value">0987654456789</span>
               </ul>
               <ul className="title ">
                 <i class="fa fa-envelope"> &nbsp;</i>
                 Email:
-                <span className="value"> nguyenvana@gmail.com</span>
+                <span className="value">nguyenvana@gmail.com</span>
               </ul>
               <ul className="title ">
                 <i class="fa fa-home"> &nbsp;</i>
                 Địa chỉ:
-                <span className="value"> 123 abc, ddd, Tp.HCM</span>
+                <span className="value">123 abc, ddd, Tp.HCM</span>
               </ul>
             </div>
             <hr />
@@ -109,7 +109,7 @@ function Home() {
                 {console.log(isView)}
                 <div className="user-Details">
                   <div className="header">
-                    <div className="panel">THONG TIN BENH NHAN</div>
+                    <div className="panel">THÔNG TIN BỆNH NHÂN</div>
                     <button
                       onClick={() => {
                         setView([])
@@ -132,7 +132,7 @@ function Home() {
                       <span className="value-v1"> {isView.phone}</span>
                     </div>
                     <div className="title-v1">
-                      <i class="fa fa-phone"> &nbsp;</i>
+                      <i class="far fa-calendar-alt"> &nbsp;</i>
                       Ngày khám:
                       <span className="value-v1"> {isView.date}</span>
                     </div>
@@ -149,7 +149,7 @@ function Home() {
                       <span className="value-v1"> 10 CMT8, Tân Bình</span>
                     </div>
                     <div className="title-v1">
-                      <i class="fa fa-home"> &nbsp;</i>
+                      <i class="far fa-clock"> &nbsp;</i>
                       Thời gian:
                       <span className="value-v1"> {isView.time}</span>
                     </div>
