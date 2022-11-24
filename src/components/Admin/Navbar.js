@@ -1,46 +1,45 @@
-import React, { useState } from 'react'
-import * as FaIcons from 'react-icons/fa'
-import * as AiIcons from 'react-icons/ai'
-import { Link } from 'react-router-dom'
-import { SidebarData } from './SidebarData'
-import '../../styles/Admin/Navbar.css'
-import { IconContext } from 'react-icons'
+import React, { useState } from "react";
+import * as FaIcons from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { SidebarData } from "./SidebarData";
+import "../../styles/Admin/Navbar.css";
+import { IconContext } from "react-icons";
 
-function Navbar() {
-  const [sidebar, setSidebar] = useState(false)
+function Navbar({ handleChooses }) {
+  const [sidebar, setSidebar] = useState(false);
 
-  const showSidebar = () => setSidebar(!sidebar)
+  const showSidebar = () => setSidebar(!sidebar);
   return (
     <>
-      <IconContext.Provider value={{ color: 'undefined' }}>
+      <IconContext.Provider value={{ color: "undefined" }}>
         <div className="navbar">
           <Link to="#" className="menu-bars">
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
         </div>
-        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-          <ul className="nav-menu-items" onClick={showSidebar}>
+        <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+          <ul className="nav-menu-items">
             <li className="navbar-toggle">
-              <Link to="#" className="menu-bars">
-                {/* <AiIcons.AiOutlineClose /> */}
-                <div className="text">QUẢN LÝ</div>
-              </Link>
+              <FaIcons.FaWindowClose
+                onClick={showSidebar}
+                style={{ color: "white", marginRight: 20, fontSize: 20 }}
+              />
             </li>
             {SidebarData.map((item, index) => {
               return (
-                <li key={index} className={item.cName}>
-                  <Link to={item.path}>
+                <li key={index} className={item.cName} onClick={showSidebar}>
+                  <a onClick={(event) => handleChooses(event, item.component)}>
                     {item.icon}
                     <span>{item.title}</span>
-                  </Link>
+                  </a>
                 </li>
-              )
+              );
             })}
           </ul>
         </nav>
       </IconContext.Provider>
     </>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
