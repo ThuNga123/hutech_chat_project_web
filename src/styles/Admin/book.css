@@ -1,11 +1,6 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  margin-left: 230px;
-  margin-right: 200px;
+.containerBook {
+  background-color: rgb(240, 248, 255);
+  height: 100vh;
 }
 
 .mainBox {

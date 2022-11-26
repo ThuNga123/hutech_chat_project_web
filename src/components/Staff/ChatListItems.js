@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import Avatar from './Avatar'
+import React, { Component } from "react";
+import Avatar from "./Avatar";
 
 export default class ChatListItems extends Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   selectChat = (e) => {
     for (
@@ -11,10 +11,10 @@ export default class ChatListItems extends Component {
       index < e.currentTarget.parentNode.children.length;
       index++
     ) {
-      e.currentTarget.parentNode.children[index].classList.remove('active')
+      e.currentTarget.parentNode.children[index].classList.remove("active");
     }
-    e.currentTarget.classList.add('active')
-  }
+    e.currentTarget.classList.add("active");
+  };
 
   render() {
     return (
@@ -22,21 +22,21 @@ export default class ChatListItems extends Component {
         style={{ animationDelay: `0.${this.props.animationDelay}s` }}
         onClick={this.selectChat}
         className={`chatlist__item ${
-          this.props.active ? this.props.active : ''
+          this.props.active ? this.props.active : ""
         } `}
       >
         <Avatar
           image={
-            this.props.image ? this.props.image : 'http://placehold.it/80x80'
+            this.props.image ? this.props.image : "http://placehold.it/80x80"
           }
           isOnline={this.props.isOnline}
         />
 
         <div className="userMeta">
           <p>{this.props.name}</p>
-          <span className="activeTime">32 mins ago</span>
+          <span className="activeTime">32 phút trước</span>
         </div>
       </div>
-    )
+    );
   }
 }
