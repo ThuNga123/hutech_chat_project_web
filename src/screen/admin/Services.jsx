@@ -5,7 +5,7 @@ const Reports = () => {
   return (
     <div className="containerServices">
       <div className="title">
-        <h3>Quản lý dịch vụ</h3>
+        <h2 className="text">QUẢN LÝ DỊCH VỤ</h2>
       </div>
       <div className="contentsv">
         <div className="nameColumn">

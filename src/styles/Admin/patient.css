@@ -1,3 +1,7 @@
+.container {
+  margin-left: 30px;
+}
+
 #customers {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;

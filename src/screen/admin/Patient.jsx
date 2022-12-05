@@ -35,7 +35,8 @@ const data = [
 
 const Patient = () => {
   return (
-    <div className="containerPatient">
+    <div className="container">
+      <div className="containerPatient">
       <table id="customers">
         <tr>
           <th>Họ và tên</th>
@@ -62,6 +63,7 @@ const Patient = () => {
           );
         })}
       </table>
+    </div>
     </div>
   );
 };
