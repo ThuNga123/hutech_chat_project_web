@@ -32,12 +32,12 @@ const HomeAdmin = ({ children }) => {
         icon: <i class='fa fa-calendar-o' />,
       },
   ]
-  return (
+  return ( 
     <div className="container">
-       <div style={{width: isOpen ? "200px" : "50px"}} className="sidebar">
+       <div style={{width: isOpen ? "260px" : "80px"}} className="sidebar">
            <div className="top_section">
                <h1 style={{display: isOpen ? "block" : "none"}} className="logo">QUẢN LÝ</h1>
-               <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
+               <div style={{marginLeft: isOpen ? "40px" : "0px"}} className="bars">
                    <i class='fa fa-bars' onClick={toggle}/>
                </div>
            </div>

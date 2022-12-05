@@ -9,7 +9,7 @@
 }
 main{
   width: 100%;
-  padding: 20px;
+  background-color: #f0f8ff;
 }
 .sidebar{
   background: #002e48;
@@ -24,12 +24,13 @@ main{
   align-items:center;
   padding-top: 40px;
   padding-bottom: 20px;
-  padding-left: 15px;
+  padding-left: 30px;
   font-size: 10px;
   width: 300px;
 }
 .logo{
   font-size: 25px;
+  padding-left: 20px;
 }
 .bars{
   display: flex;
@@ -43,7 +44,7 @@ main{
 .link{
   display: flex;
   color: #fff;
-  padding: 20px 15px;
+  padding: 20px 30px;
   gap: 15px;
   transition: all 0.5s;
 }
@@ -59,3 +60,4 @@ main{
 .icon, .link_text{
   font-size: 20px;
 }
+
