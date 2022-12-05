@@ -1,7 +1,7 @@
 import book from "../../styles/Admin/book.css";
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import { Tabs, Tab, Content } from "../staff/tab.jsx";
+import { Tabs, Tab, Content } from "../../screen/staff/tab.jsx";
 import "../../styles/Staff/tab.css";
 import { useNavigate } from "react-router-dom";
 import ReactTable from "react-table";

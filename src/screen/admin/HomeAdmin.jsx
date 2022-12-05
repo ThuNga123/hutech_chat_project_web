@@ -1,57 +1,62 @@
-import React, { useState, useEffect } from 'react'
-import { FaClosedCaptioning } from 'react-icons/fa'
-import Navbar from '../../components/Admin/Navbar'
-import Home from '../../components/Admin/Home'
-import { useNavigate } from 'react-router-dom'
-import Sidebar from '../../components/Admin/Sidebar'
-// import * as All from "../../screen/admin";
-// const HomeAdmin = () => {
-//   const [component, setComponent] = useState(<Home />)
-//   const navigate = useNavigate()
-//   const handleChooses = (event, cpn) => {
-//     console.log(event.target)
-//     setComponent(cpn)
-//   }
+import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import  '../../styles/Admin/HomeAdmin.css'
 
-//   // useEffect(() => {
-//   //   if (localStorage.getItem("accessToken")) {
-//   //     if (localStorage.getItem("role") !== "admin") {
-//   //       console.log("Không có quyền truy cập");
-//   //       navigate("/403");
-//   //     }
-//   //   } else {
-//   //     console.log("Vui lòng đăng nhập");
-//   //     navigate("/");
-//   //   }
-//   // });
-
-//   return (
-//     <div>
-//       {/* {localStorage.getItem("accessToken") ? (
-//         localStorage.getItem("role") == "admin" ? (
-//           <div>
-//             <div>
-//               <Navbar handleChooses={handleChooses} />
-//             </div>
-//             <div>{component}</div>
-//           </div>
-//         ) : null
-//       ) : null} */}
-
-//       <div>
-//         <Navbar handleChooses={handleChooses} />
-//       </div>
-//       <div>{component}</div>
-//     </div>
-//   )
-//}
-
-const HomeAdmin = () => {
+const HomeAdmin = ({ children }) => {
+  const [isOpen, setIsOpen] = useState(false)
+  const toggle = () => setIsOpen(!isOpen)
+  const menuItem = [
+    {
+      path: '/',
+      name: 'Trang chủ',
+      icon: <i class='fa fa-home' />,
+    },
+    {
+        path: '/services',
+        name: 'Dịch vụ',
+        icon: <i class='fa fa-calendar-plus-o' />,
+      },
+    {
+      path: '/patient',
+      name: 'Khách hàng',
+      icon: <i class='fa fa-user' />,
+    },
+    {
+      path: '/personnel',
+      name: 'Nhân viên',
+      icon: <i class='fa fa-users' />,
+    },
+    {
+        path: '/book',
+        name: 'Đặt lịch',
+        icon: <i class='fa fa-calendar-o' />,
+      },
+  ]
   return (
-    
-    <div>
+    <div className="container">
+       <div style={{width: isOpen ? "200px" : "50px"}} className="sidebar">
+           <div className="top_section">
+               <h1 style={{display: isOpen ? "block" : "none"}} className="logo">QUẢN LÝ</h1>
+               <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
+                   <i class='fa fa-bars' onClick={toggle}/>
+               </div>
+           </div>
+           <div className='hr'>
+                <hr />
+           </div>
+           {
+               menuItem.map((item, index)=>(
+                   <NavLink to={item.path} key={index} className="link" activeclassName="active">
+                       <div className="icon">{item.icon}</div>
+                       <div style={{display: isOpen ? "block" : "none"}} className="link_text">{item.name}</div>
+                   </NavLink>
+               ))
+           }
+       </div>
+       <main>{children}</main>
     </div>
   )
 }
 
 export default HomeAdmin
+

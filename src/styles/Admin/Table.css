@@ -13,7 +13,7 @@
   }
 
   tr:nth-child(even){background-color: #f2f2f2;}
-tr:hover {background-color: #ddd;}    
+  tr:hover {background-color: #ddd;}    
   th {
     border-bottom: 1px solid black;
     background-color: #34d1be;
