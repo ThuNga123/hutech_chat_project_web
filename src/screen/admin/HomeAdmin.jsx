@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import  '../../styles/Admin/HomeAdmin.css'
-
+ 
 const HomeAdmin = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
@@ -34,7 +34,7 @@ const HomeAdmin = ({ children }) => {
   ]
   return ( 
     <div className="container">
-       <div style={{width: isOpen ? "260px" : "80px"}} className="sidebar">
+       <div style={{width: isOpen ? "300px" : "120px"}} className="sidebar">
            <div className="top_section">
                <h1 style={{display: isOpen ? "block" : "none"}} className="logo">QUẢN LÝ</h1>
                <div style={{marginLeft: isOpen ? "40px" : "0px"}} className="bars">

@@ -1,8 +1,7 @@
-.title {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
+.container {
+  background-color: "#F0F8FF";
+   height: "100vh"
+} 
 .charts {
   display: flex;
   padding-top: 20px;
@@ -12,7 +11,7 @@
   flex-wrap: wrap;
 }
 .chart {
-  width: 350px;
+  width: 500px;
   height: 100px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
