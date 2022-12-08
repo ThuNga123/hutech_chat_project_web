@@ -1,58 +1,61 @@
-.modalBackground {
-    width: 90vw;
-    height: 70vh;
+.modalBackground-del {
+    width: 20vw;
+    height: 10vh;
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  .modalContainer {
-    width: 500px;
-    height: 500px;
+  .modalContainer-del {
+    /* width: 200px; */
+    height: 150px;
     border-radius: 12px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     flex-direction: column;
     padding: 30px;
+    margin-left: -1100px;
   }
-  
-  .modalContainer .title {
+/*    
+  .modalContainer-del .title {
     display: inline-block;
     text-align: center;
     margin-top: 10px;
-  }
+    font-size: 15px;
+  } */
   
-  .titleCloseBtn {
+  .titleCloseBtn-del {
     display: flex;
     justify-content: flex-end;
   }
   
-  .titleCloseBtn button {
+  .titleCloseBtn-del button {
     background-color: transparent;
     border: none;
-    font-size: 25px;
+    font-size: 10px;
     cursor: pointer;
   }
   
-  .modalContainer .body {
+  .modalContainer-del .body {
     flex: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.7rem;
+    font-size: 20px;
+    font-weight: bold;
     text-align: center;
   }
   
-  .modalContainer .footer {
+  .modalContainer-del .footer {
     flex: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  .modalContainer .footer button {
+  .modalContainer-del .footer button {
     width: 150px;
     height: 45px;
     margin: 10px;
@@ -60,10 +63,11 @@
     background-color: cornflowerblue;
     color: white;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 15px;
     cursor: pointer;
   }
   
-  #cancelBtn {
+  #cancelBtn-del {
     background-color: crimson;
+    font-size: 15px;
   }

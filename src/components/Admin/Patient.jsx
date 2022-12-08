@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { confirmAlert } from 'react-confirm-alert'
 import AddPatient from './AddPatient'
 import '../../styles/Admin/patient.css'
+import Delete from './Delete'
 
 const Patient = () => {
   const [modalOpen, setModalOpen] = useState(false)
+  const [modalDele, setModalDele] = useState(false)
   const data = [
     {
       userid: '1',
@@ -145,14 +147,14 @@ const Patient = () => {
                     <button
                       className="delete"
                       onClick={() => {
-                        setModalOpen(true)
+                        setModalDele(true)
                         setView([])
                       }}
                     >
                       <i class="fa fa-trash" />
                       &nbsp; Xoá
                     </button>
-                    {modalOpen && <AddPatient setOpenModal={setModalOpen} />}
+                    {modalDele && <Delete setDeleModal={setModalDele} />}
                     &nbsp;
                     <button className="delete" onClick={() => setView(val)}>
                       <i class="fas fa-edit"></i>

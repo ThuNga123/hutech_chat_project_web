@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import '../../styles/Admin/Services.css'
 import img from '../../assets/images/abc.png'
+import Delete from '../../components/Admin/Delete'
 import AddService from './AddService'
 
 const data = [
@@ -61,6 +62,7 @@ const data = [
 
 const Services = () => {
   const [modalOpen, setModalOpen] = useState(false)
+  const [modalDele, setModalDele] = useState(false)
   const [isView, setView] = useState([])
   return (
     <div className="containerPatient">
@@ -154,14 +156,14 @@ const Services = () => {
                   <button
                     className="deleted"
                     onClick={() => {
-                      setModalOpen(true)
+                      setModalDele(true)
                       setView([])
                     }}
                   >
                     <i class="fa fa-trash" />
                     &nbsp; Xoá
                   </button>
-                  {modalOpen && <AddService setOpenModal={setModalOpen} />}
+                  {modalDele && <Delete setDeleModal={setModalDele} />}
                   &nbsp;
                   <button className="deleted" onClick={() => setView(val)}>
                     <i class="fas fa-edit"></i>

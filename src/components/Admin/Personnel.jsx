@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import '../../styles/Admin/Personnel.css'
 import img from '../../assets/images/abc.png'
 import AddPersonnel from '../../components/Admin/AddPersonnel'
+import Delete from '../../components/Admin/Delete'
 import { Button } from 'react-scroll'
 
 const data = [
@@ -41,6 +42,7 @@ const data = [
 
 const Personnel = () => {
   const [modalOpen, setModalOpen] = useState(false)
+  const [modalDele, setModalDele] = useState(false)
   const [isView, setView] = useState([])
   return (
     <div className="containerPatient">
@@ -147,14 +149,14 @@ const Personnel = () => {
                 <button
                   className="dele"
                   onClick={() => {
-                    setModalOpen(true)
+                    setModalDele(true)
                     setView([])
                   }}
                 >
                   <i class="fa fa-trash" />
                   &nbsp; Xoá
                 </button>
-                {modalOpen && <AddPersonnel setOpenModal={setModalOpen} />}
+                {modalDele && <Delete setDeleModal={setModalDele} />}
                 &nbsp;
                 <button className="dele" onClick={() => setView(val)}>
                   <i class="fas fa-edit"></i>
