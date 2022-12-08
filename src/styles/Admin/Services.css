@@ -40,3 +40,9 @@
   text-align: center;
   align-items: center;
 }
+
+.image {
+  height: 120px;
+  width: 120px;
+  padding-left: 100px;
+}

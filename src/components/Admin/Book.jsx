@@ -1,75 +1,75 @@
-import book from "../../styles/Admin/book.css";
-import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
-import { Tabs, Tab, Content } from "../../screen/staff/tab.jsx";
-import "../../styles/Staff/tab.css";
-import { useNavigate } from "react-router-dom";
-import ReactTable from "react-table";
-import * as Scroll from 'react-scroll';
+import book from '../../styles/Admin/book.css'
+import React, { useState, useEffect } from 'react'
+import ReactDOM from 'react-dom'
+import { Tabs, Tab, Content } from '../../screen/staff/tab.jsx'
+import '../../styles/Staff/tab.css'
+import { useNavigate } from 'react-router-dom'
+import ReactTable from 'react-table'
+import * as Scroll from 'react-scroll'
 
 const Book = () => {
-  const navigate = useNavigate();
-  const [active, setActive] = useState(0);
-  const [isView, setView] = useState([]);
+  const navigate = useNavigate()
+  const [active, setActive] = useState(0)
+  const [isView, setView] = useState([])
   const handleClick = (e) => {
-    const index = parseInt(e.target.id, 0);
+    const index = parseInt(e.target.id, 0)
     if (index !== active) {
-      setActive(index);
+      setActive(index)
     }
-  };
+  }
 
   const userInfo = [
     {
-      userid: "1",
-      name: "Nguyen Van B",
-      sex: "Nam",
-      phone: "09876545678",
-      email: "nguyenb@gmail.com",
-      date: "2022/11/11",
-      time: "9:30",
+      userid: '1',
+      name: 'Nguyen Van B',
+      sex: 'Nam',
+      phone: '09876545678',
+      email: 'nguyenb@gmail.com',
+      date: '2022/11/11',
+      time: '9:30',
     },
 
     {
-      userid: "2",
-      name: "Nguyen Van C",
-      sex: "Nam",
-      phone: "09876545356786543",
-      email: "nguyenc@gmail.com",
-      date: "2022/11/11",
-      time: "13:30",
+      userid: '2',
+      name: 'Nguyen Van C',
+      sex: 'Nam',
+      phone: '09876545356786543',
+      email: 'nguyenc@gmail.com',
+      date: '2022/11/11',
+      time: '13:30',
     },
 
     {
-      userid: "3",
-      name: "Nguyen Thi C",
-      sex: "Nu",
-      phone: "0134567543",
-      email: "nguyenc@gmail.com",
-      date: "2022/11/14",
-      time: "10:00",
+      userid: '3',
+      name: 'Nguyen Thi C',
+      sex: 'Nu',
+      phone: '0134567543',
+      email: 'nguyenc@gmail.com',
+      date: '2022/11/14',
+      time: '10:00',
     },
-  ];
+  ]
 
   const columns = [
     {
-      header: "Name",
-      accessor: "name", 
+      header: 'Name',
+      accessor: 'name',
     },
     {
-      header: "Age",
-      accessor: "age",
-      Cell: (props) => <span className="number">{props.value}</span>, 
+      header: 'Age',
+      accessor: 'age',
+      Cell: (props) => <span className="number">{props.value}</span>,
     },
     {
-      id: "friendName", 
-      header: "Friend Name",
-      accessor: (d) => d.friend.name, 
+      id: 'friendName',
+      header: 'Friend Name',
+      accessor: (d) => d.friend.name,
     },
     {
-      header: (props) => <span>Friend Age</span>, 
-      accessor: "friend.age", 
+      header: (props) => <span>Friend Age</span>,
+      accessor: 'friend.age',
     },
-  ];
+  ]
 
   return (
     <div className="containerBook">
@@ -82,7 +82,7 @@ const Book = () => {
                 <div className="panel">THÔNG TIN BỆNH NHÂN</div>
                 <button
                   onClick={() => {
-                    setView([]);
+                    setView([])
                   }}
                   className="exit"
                 >
@@ -156,8 +156,8 @@ const Book = () => {
                         <i class="fa fa-info-circle"></i>
                       </td>
                       <td>
-                        {" "}
-                        &nbsp; Một đăng ký khám bệnh mới từ{" "}
+                        {' '}
+                        &nbsp; Một đăng ký khám bệnh mới từ{' '}
                         <a onClick={() => setView(info)}>
                           <a href="#">{info.name}.</a>
                         </a>
@@ -181,8 +181,8 @@ const Book = () => {
           </>
         </div>
       </div>
-    </div>  
-    );
-};
+    </div>
+  )
+}
 
-export default Book;
+export default Book

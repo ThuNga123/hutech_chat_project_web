@@ -60,14 +60,6 @@ const Patient = () => {
             <div className="user-Details">
               <div className="header">
                 <div className="panel">THÔNG TIN KHÁCH HÀNG</div>
-                <button
-                  onClick={() => {
-                    setView([])
-                  }}
-                  className="exit"
-                >
-                  X
-                </button>
               </div>
               <hr />
               <div className="user-left">
@@ -110,17 +102,13 @@ const Patient = () => {
           </div>
         ) : null}
       </div>
-      {data.map((val, key) => {
-        return (
-          <div className="header">
-            <div className="panel">
-              QUẢN LÝ KHÁCH HÀNG
-              <div onClick={() => setView(val)}>X</div>
-            </div>
-          </div>
-        )
-      })}
       <div>
+        <div className="header">
+          <div className="panel">
+            QUẢN LÝ KHÁCH HÀNG
+            <div>X</div>
+          </div>
+        </div>
         <table id="customers">
           <tr>
             <th>Họ và tên</th>
