@@ -90,7 +90,7 @@ const Book = () => {
                 </button>
               </div>
               <hr />
-              <div className="user-left">
+              <div className="user-left-book">
                 <div className="title-v1">
                   <i class="fa fa-user"> &nbsp;</i>
                   Họ và tên:
@@ -107,7 +107,7 @@ const Book = () => {
                   <span className="value-v1"> {isView.date}</span>
                 </div>
               </div>
-              <div className="user-right">
+              <div className="user-right-book">
                 <div className="title-v1">
                   <i class="fa fa-envelope"> &nbsp;</i>
                   Email:

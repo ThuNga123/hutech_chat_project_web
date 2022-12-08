@@ -1,6 +1,7 @@
-import React from 'react'
-import '../../styles/Admin/Personnel.css'
+import React, { useState, useEffect } from 'react'
+import '../../styles/Admin/Services.css'
 import img from '../../assets/images/abc.png'
+import AddService from './AddService'
 
 const data = [
   {
@@ -59,9 +60,73 @@ const data = [
 ]
 
 const Services = () => {
+  const [modalOpen, setModalOpen] = useState(false)
+  const [isView, setView] = useState([])
   return (
     <div className="containerPatient">
+      <div>
+        {isView.length != 0 ? (
+          <div className="info-p">
+            {console.log(isView)}
+            <div className="user-Details">
+              <div className="header">
+                <div className="panel">THÔNG TIN DỊCH VỤ</div>
+                <button
+                  onClick={() => {
+                    setView([])
+                  }}
+                  className="exit"
+                >
+                  X
+                </button>
+              </div>
+              <hr />
+              <div className="user-image-ser">
+                <img
+                  src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                  className="image-book"
+                ></img>
+              </div>
+              <div className="user-left-ser">
+                <form>
+                  <div className="title-v1">
+                    <i class="fa fa-user"> &nbsp;</i>
+                    Tên dịch vụ
+                    <span className="value-v1"> {isView.name}</span>
+                  </div>
+                  <div className="title-v1">
+                    <i class="fa fa-phone"> &nbsp;</i>
+                    Giá tiền:
+                    <span className="value-v1"> {isView.price}</span>
+                  </div>
+                </form>
+              </div>
+              <div className="user-right-ser">
+                <div className="title-v1">
+                  <i class="far fa-clock"> &nbsp;</i>
+                  Ngày tạo:
+                  <span className="value-v1"> {isView.date}</span>
+                </div>
+                <div className="title-v1">
+                  <i class="fa fa-envelope"> &nbsp;</i>
+                  Người tạo:
+                  <span className="value-v1"> {isView.user}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : null}
+      </div>
       <div className="panel">QUẢN LÝ DỊCH VỤ</div>
+      <button
+        className="openModalBtn"
+        onClick={() => {
+          setModalOpen(true)
+        }}
+      >
+        Thêm mới
+      </button>
+      {modalOpen && <AddService setOpenModal={setModalOpen} />}
       <table id="customers">
         <tr>
           <th>Hình ảnh</th>
@@ -77,7 +142,7 @@ const Services = () => {
               <td>
                 <img
                   src="https://bootdey.com/img/Content/avatar/avatar1.png"
-                  className="image"
+                  className="image-ser"
                 ></img>
               </td>
               <td>{val.name}</td>
@@ -85,10 +150,24 @@ const Services = () => {
               <td>{val.date}</td>
               <td>{val.user}</td>
               <td className="icon">
-                <i class="fa fa-trash" aria-hidden="true">
+                <div>
+                  <button
+                    className="deleted"
+                    onClick={() => {
+                      setModalOpen(true)
+                      setView([])
+                    }}
+                  >
+                    <i class="fa fa-trash" />
+                    &nbsp; Xoá
+                  </button>
+                  {modalOpen && <AddService setOpenModal={setModalOpen} />}
                   &nbsp;
-                </i>
-                <i class="fas fa-edit"></i>
+                  <button className="deleted" onClick={() => setView(val)}>
+                    <i class="fas fa-edit"></i>
+                    &nbsp; Sửa
+                  </button>
+                </div>
               </td>
             </tr>
           )

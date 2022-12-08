@@ -143,26 +143,21 @@ const Patient = () => {
                 <td className="icon">
                   <div>
                     <button
-                      className="openModalBtn"
+                      className="delete"
                       onClick={() => {
                         setModalOpen(true)
+                        setView([])
                       }}
                     >
-                      Thêm mới
+                      <i class="fa fa-trash" />
+                      &nbsp; Xoá
                     </button>
                     {modalOpen && <AddPatient setOpenModal={setModalOpen} />}
-                    <i
-                      class="fa fa-trash"
-                      aria-hidden="true"
-                      // className="openModalBtn"
-                      // onClick={() => {
-                      //   setModalOpen(true)
-                      // }}
-                    >
-                      &nbsp;
-                    </i>
-                    {/* {modalOpen && <AddPatient setOpenModal={setModalOpen} />} */}
-                    <i class="fas fa-edit" onClick={() => setView(val)}></i>
+                    &nbsp;
+                    <button className="delete" onClick={() => setView(val)}>
+                      <i class="fas fa-edit"></i>
+                      &nbsp; Sửa
+                    </button>
                   </div>
                 </td>
               </tr>

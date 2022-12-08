@@ -38,9 +38,9 @@
   padding-top: 30px;
 }
 
-.user-left {
+.user-left-book {
   display: inline-block;
-  width: 49%;
+  width: 35%;
 }
 
 .title-v1 {
@@ -57,10 +57,10 @@
   text-align: justify;
 }
 
-.user-right {
+.user-right-book {
   display: inline-block;
   margin-left: 10px;
-  width: 49%;
+  width: 35%;
 }
 
 hr {
@@ -74,7 +74,7 @@ hr {
   padding-bottom: 20px;
   margin-top: 30px;
 }
-
+ 
 .confirm {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 

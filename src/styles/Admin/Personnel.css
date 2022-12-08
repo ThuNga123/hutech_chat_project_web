@@ -11,7 +11,7 @@
   
 }
 
-#customers td ,
+#customers td {}
 #customers th {
   border: 1px solid #ddd;
   padding: 8px;  
@@ -29,11 +29,10 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04aa6d;
   color: white;
 }
 
-.image {
+.image-per {
   padding-left: 5px;
   height: 100px;
   width: 100px;
@@ -76,9 +75,23 @@
   margin-bottom: -70px;
 }
 
-.user-left {
+.user-left-per {
   display: inline-block;
-  width: 49%;
+  width: 45%;
+}
+
+
+.user-image-per{
+  display: inline-block;
+  height: 50px;
+  width: 15%;
+  padding-top: -70px;
+}
+
+.image-book {
+  height: 20vh;
+  width: 13vw;
+  padding-top: 20px;
 }
 
 .title-v1 {
@@ -95,10 +108,10 @@
   text-align: justify;
 }
 
-.user-right {
+.user-right-per {
   display: inline-block;
   margin-left: 10px;
-  width: 49%;
+  width: 35%;
 }
 
 hr {
@@ -146,6 +159,18 @@ hr {
 .openModalBtn {
   width: 100px;
   height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: cornflowerblue;
+  color: white;
+  cursor: pointer;
+}
+
+
+.dele {
+  width: 70px;
+  height: 40px;
+  margin-top: 40px;
   border: none;
   border-radius: 6px;
   background-color: cornflowerblue;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import '../../styles/Admin/Personnel.css'
 import img from '../../assets/images/abc.png'
-import AddPatient from './AddPatient'
+import AddPersonnel from '../../components/Admin/AddPersonnel'
 import { Button } from 'react-scroll'
 
 const data = [
@@ -61,7 +61,13 @@ const Personnel = () => {
                 </button>
               </div>
               <hr />
-              <div className="user-left">
+              <div className="user-image-per">
+                <img
+                  src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                  className="image-book"
+                ></img>
+              </div>
+              <div className="user-left-per">
                 <form>
                   <div className="title-v1">
                     <i class="fa fa-user"> &nbsp;</i>
@@ -80,7 +86,7 @@ const Personnel = () => {
                   </div>
                 </form>
               </div>
-              <div className="user-right">
+              <div className="user-right-per">
                 <div className="title-v1">
                   <i class="far fa-clock"> &nbsp;</i>
                   Giới tính:
@@ -110,7 +116,7 @@ const Personnel = () => {
       >
         Thêm mới
       </button>
-      {modalOpen && <AddPatient setOpenModal={setModalOpen} />}
+      {modalOpen && <AddPersonnel setOpenModal={setModalOpen} />}
       <table id="customers">
         <tr>
           <th>Hình ảnh</th>
@@ -128,7 +134,7 @@ const Personnel = () => {
               <td>
                 <img
                   src="https://bootdey.com/img/Content/avatar/avatar1.png"
-                  className="image"
+                  className="image-per"
                 ></img>
               </td>
               <td>{val.name}</td>
@@ -137,12 +143,24 @@ const Personnel = () => {
               <td>{val.email}</td>
               <td>{val.address}</td>
               <td>{val.role}</td>
-              <td className="icon">
-                <i class="fa fa-trash" aria-hidden="true">
-                  &nbsp;
-                </i>
-                <i class="fas fa-edit" onClick={() => setView(val)}></i>
-              </td>
+              <div>
+                <button
+                  className="dele"
+                  onClick={() => {
+                    setModalOpen(true)
+                    setView([])
+                  }}
+                >
+                  <i class="fa fa-trash" />
+                  &nbsp; Xoá
+                </button>
+                {modalOpen && <AddPersonnel setOpenModal={setModalOpen} />}
+                &nbsp;
+                <button className="dele" onClick={() => setView(val)}>
+                  <i class="fas fa-edit"></i>
+                  &nbsp; Sửa
+                </button>
+              </div>
             </tr>
           )
         })}

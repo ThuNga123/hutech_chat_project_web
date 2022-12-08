@@ -6,7 +6,7 @@
   background-color: #f0f8ff;
   height: 100vh; 
 } 
- 
+
 .title {
   display: flex;
   flex-direction: row;
@@ -41,8 +41,143 @@
   align-items: center;
 }
 
-.image {
+.image-ser {
   height: 120px;
   width: 120px;
   padding-left: 100px;
+}
+
+.panel {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: inline-block;
+  font-size: xx-large;
+  text-align: center;
+  padding-bottom: 30px;
+  color: black;
+  display: inline-block;
+}
+.deleted {
+  width: 70px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: cornflowerblue;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.panel {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: inline-block;
+  font-size: xx-large;
+  text-align: center;
+  padding-bottom: 50px;
+  color: black;
+  display: inline-block;
+}
+ 
+.mainBox {
+  width: 100%;
+  margin-bottom: 40px;
+  flex-direction: column;
+  background-color: white;
+}
+
+.info-p {
+  height: 30%;
+}
+
+.user-Details {
+  flex-direction: row;
+  font-size: medium;
+  padding-left: 10px;
+  padding-bottom: 40px;
+}
+
+.header {
+  flex-direction: row;
+  margin-bottom: -70px;
+}
+
+.user-left-ser {
+  display: inline-block;
+  width: 30%;
+  padding-top: -40px;
+}
+
+
+.user-image-ser{
+  display: inline-block;
+  height: 50px;
+  width: 20%;
+  padding-left: 50px;
+}
+
+.image-book {
+  height: 20vh;
+  width: 13vw;
+  padding-top: 20px;
+}
+
+.title-v1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  padding-top: 20px;
+  margin-left: 50px;
+}
+
+.value-v1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: black;
+  text-align: justify;
+}
+
+.user-right-ser {
+  display: inline-block;
+  margin-left: 10px;
+  width: 35%;
+  padding-top: -40px;
+}
+
+hr {
+  margin-top: 10px;
+  color: #04aa6d;
+}
+
+.btn {
+  margin-left: 500px;
+  padding-bottom: 20px;
+  margin-top: 30px;
+}
+
+.confirm {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  height: 30px;
+  /* margin-right: 30px; */
+  background-color: #77ab49;
+  color: white;
+}
+
+.exit {
+  display: inline-block;
+  width: 5%;
+}
+
+.user-info {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  margin-top: 20px;
+
+  background-color: #eeeeee;
+  border-radius: 15px;
+  font-size: 18px;
+  padding-top: 30px;
+  height: 50px;
+  padding-left: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
+  /* width: 100%; */
 }
