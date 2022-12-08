@@ -7,8 +7,8 @@
     align-items: center;
   }
   
-  .modalContainer {
-    width: 500px;
+  .modalContainer-per {
+    width: 1000px;
     height: 500px;
     border-radius: 12px;
     background-color: white;
@@ -68,35 +68,62 @@
     background-color: crimson;
   }
 
-  .form-per{
+  /* .form-per{
     padding-left: -1000px;
-  }
+  } */
 
   .tit-per {
     font-size: 25px;
     text-align: center;
     margin-bottom: 20px;
+    color: #002e48;
+    font-weight: bold;
+  }
+
+  .sum-per {
+    flex-direction: row;
+  }
+
+  .img-per {
+    display: inline-block;
+    width: 30%;
+    height: 350px;
+    margin-left: 50px;
+    background-color: aqua;
+  }
+
+  .fo-per {
+    display: inline-block;
+    width: 55%;
+    padding-left: 50px;
   }
 
   .row-per {
     flex-direction: row;
   }
-
+ 
   .row-name-per {
+    color: #002e48;
     font-size: 15px;
     display: inline-block;
     width: 20%;
     margin-left: 20px;
+    font-weight: bold;
   }
 
   .row-input-per {
     display: inline-block;
-    width: 75%;
+    width: 70%;
+    margin-left: 20px;
   }
 
   .input-per{
-    margin-left: 20px;
     color: #002e48;
+    width: 350px;
+    height: 40px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
   }
 
   .btt-sub-per {
@@ -114,7 +141,7 @@
     border-radius: 20px;
     height: 40px;
     width: 120px;
-    background-color: #002e48;
+    background-color:  crimson;
     color: white;
     margin-left: 20px;
     justify-content: center;

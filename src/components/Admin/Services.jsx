@@ -121,7 +121,7 @@ const Services = () => {
       </div>
       <div className="panel">QUẢN LÝ DỊCH VỤ</div>
       <button
-        className="openModalBtn"
+        className="openModalBtn-ser"
         onClick={() => {
           setModalOpen(true)
         }}
