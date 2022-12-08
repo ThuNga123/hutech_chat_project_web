@@ -94,7 +94,7 @@
   .img-ser {
     display: inline-block;
     width: 30%;
-    height: 350px;
+    height: 200px;
     margin-left: 50px;
     background-color: aqua;
   }
@@ -105,8 +105,13 @@
     padding-left: 50px;
   }
 
-  .row-ser {
+  .row-ser-1{
     flex-direction: row;
+    margin-bottom: 50px;
+  }
+  .row-ser-2 {
+    flex-direction: row;
+    margin-bottom: 20px;
   }
  
   .row-name-ser {

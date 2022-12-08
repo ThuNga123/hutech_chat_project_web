@@ -3,7 +3,7 @@ import '../../styles/Admin/AddService.css'
 
 function AddService({ setOpenModal }) {
   return (
-    <div className="modalBackground-">
+    <div className="modalBackground">
       <div className="modalContainer-ser">
         <div className="titleCloseBtn-ser">
           <button
@@ -14,80 +14,32 @@ function AddService({ setOpenModal }) {
             X
           </button>
         </div>
-        {/* <form className="form-ser">
-          <div className="tit-ser">THÔNG TIN NHÂN VIÊN</div>
+        <form className="form-ser">
+          <div className="tit-ser">THÔNG TIN DỊCH VỤ</div>
           <div className="sum-ser">
             <div className="img-ser"></div>
             <div className="fo-ser">
-              <div className="row-ser">
-                <div className="row-name-ser">Họ và tên: </div>
+              <div className="row-ser-1">
+                <div className="row-name-ser">Tên dịch vụ: </div>
                 <div className="row-input-ser">
                   <input
                     className="input-ser"
                     type="text"
                     id="text"
                     name="text"
-                    placeholder="Vui lòng nhập họ tên"
+                    placeholder="Vui lòng nhập tên dịch vụ"
                   />
                 </div>
               </div>
-              <div className="row-ser">
-                <div className="row-name-ser">Giới tính: </div>
+              <div className="row-ser-2">
+                <div className="row-name-ser">Giá tiền: </div>
                 <div className="row-input-ser">
                   <input
                     className="input-ser"
                     type="text"
                     id="text"
                     name="text"
-                    placeholder="Vui lòng nhập giới tính"
-                  />
-                </div>
-              </div>
-              <div className="row-ser">
-                <div className="row-name-ser">Số điện thoại: </div>
-                <div className="row-input-ser">
-                  <input
-                    className="input-ser"
-                    type="text"
-                    id="text"
-                    name="text"
-                    placeholder="Vui lòng nhập số điện thoại"
-                  />
-                </div>
-              </div>
-              <div className="row-ser">
-                <div className="row-name-ser">Email: </div>
-                <div className="row-input-ser">
-                  <input
-                    className="input-ser"
-                    type="text"
-                    id="text"
-                    name="text"
-                    placeholder="Vui lòng nhập email"
-                  />
-                </div>
-              </div>
-              <div className="row-ser">
-                <div className="row-name-ser">Địa chỉ: </div>
-                <div className="row-input-ser">
-                  <input
-                    className="input-ser"
-                    type="text"
-                    id="text"
-                    name="text"
-                    placeholder="Vui lòng nhập địa chỉ"
-                  />
-                </div>
-              </div>
-              <div className="row-ser">
-                <div className="row-name-ser">Chức vụ: </div>
-                <div className="row-input-ser">
-                  <input
-                    className="input-ser"
-                    type="text"
-                    id="text"
-                    name="text"
-                    placeholder="Vui lòng nhập chức vụ"
+                    placeholder="Vui lòng nhập giá tiền"
                   />
                 </div>
               </div>
@@ -99,7 +51,7 @@ function AddService({ setOpenModal }) {
           <button className="btt-can-ser" type="cancel">
             Huỷ bỏ
           </button>
-        </form> */}
+        </form>
       </div>
     </div>
   )

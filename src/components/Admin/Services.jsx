@@ -124,6 +124,7 @@ const Services = () => {
         className="openModalBtn-ser"
         onClick={() => {
           setModalOpen(true)
+          setView([])
         }}
       >
         Thêm mới

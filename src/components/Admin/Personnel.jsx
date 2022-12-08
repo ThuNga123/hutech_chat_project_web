@@ -114,6 +114,7 @@ const Personnel = () => {
         className="openModalBtn"
         onClick={() => {
           setModalOpen(true)
+          setView([])
         }}
       >
         Thêm mới

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { confirmAlert } from 'react-confirm-alert'
 import AddPatient from './AddPatient'
 import '../../styles/Admin/patient.css'
 import Delete from './Delete'
@@ -49,10 +48,7 @@ const Patient = () => {
       setActive(index)
     }
   }
-  const [deleteId, setDeleteId] = useState('')
-  const handleClickDelete = (userid) => {
-    console.log(userid)
-  }
+
   return (
     <div className="containerPatient">
       <div>
@@ -119,6 +115,7 @@ const Patient = () => {
             className="openModalBtn"
             onClick={() => {
               setModalOpen(true)
+              setView([])
             }}
           >
             Thêm mới
