@@ -67,3 +67,55 @@
   #cancelBtn {
     background-color: crimson;
   }
+
+  .form-per{
+    padding-left: -1000px;
+  }
+
+  .tit-per {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .row-per {
+    flex-direction: row;
+  }
+
+  .row-name-per {
+    font-size: 15px;
+    display: inline-block;
+    width: 20%;
+    margin-left: 20px;
+  }
+
+  .row-input-per {
+    display: inline-block;
+    width: 75%;
+  }
+
+  .input-per{
+    margin-left: 20px;
+    color: #002e48;
+  }
+
+  .btt-sub-per {
+    font-size: medium;
+    border-radius: 20px;
+    height: 40px;
+    width: 120px;
+    background-color: #00507c;
+    color: white;
+    margin-left: 120px;
+  }
+
+  .btt-can-per {
+    font-size: medium;
+    border-radius: 20px;
+    height: 40px;
+    width: 120px;
+    background-color: #002e48;
+    color: white;
+    margin-left: 20px;
+    justify-content: center;
+  }

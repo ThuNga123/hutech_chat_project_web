@@ -144,3 +144,13 @@ hr {
   cursor: pointer;
   margin-top: -20px;
 }
+
+.openModalBtn {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: cornflowerblue;
+  color: white;
+  cursor: pointer;
+}

@@ -181,3 +181,13 @@ hr {
   margin-right: 30px;
   /* width: 100%; */
 }
+
+.openModalBtn {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: cornflowerblue;
+  color: white;
+  cursor: pointer;
+}
