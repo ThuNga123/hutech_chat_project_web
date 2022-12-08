@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { confirmAlert } from 'react-confirm-alert'
-// import Modal from 'react-bootstrap/Modal'
-
+import AddPatient from './AddPatient'
 import '../../styles/Admin/patient.css'
 
 const Patient = () => {
+  const [modalOpen, setModalOpen] = useState(false)
   const data = [
     {
       userid: '1',
@@ -60,6 +60,14 @@ const Patient = () => {
             <div className="user-Details">
               <div className="header">
                 <div className="panel">THÔNG TIN KHÁCH HÀNG</div>
+                <button
+                  onClick={() => {
+                    setView([])
+                  }}
+                  className="exit"
+                >
+                  X
+                </button>
               </div>
               <hr />
               <div className="user-left">
@@ -104,10 +112,16 @@ const Patient = () => {
       </div>
       <div>
         <div className="header">
-          <div className="panel">
-            QUẢN LÝ KHÁCH HÀNG
-            <div>X</div>
-          </div>
+          <div className="panel">QUẢN LÝ KHÁCH HÀNG</div>
+          <button
+            className="openModalBtn"
+            onClick={() => {
+              setModalOpen(true)
+            }}
+          >
+            Thêm mới
+          </button>
+          {modalOpen && <AddPatient setOpenModal={setModalOpen} />}
         </div>
         <table id="customers">
           <tr>
@@ -127,14 +141,29 @@ const Patient = () => {
                 <td>{val.email}</td>
                 <td>{val.address}</td>
                 <td className="icon">
-                  <i
-                    class="fa fa-trash"
-                    aria-hidden="true"
-                    onClick={() => handleClickDelete(val.userid)}
-                  >
-                    &nbsp;
-                  </i>
-                  <i class="fas fa-edit" onClick={() => setView(val)}></i>
+                  <div>
+                    <button
+                      className="openModalBtn"
+                      onClick={() => {
+                        setModalOpen(true)
+                      }}
+                    >
+                      Thêm mới
+                    </button>
+                    {modalOpen && <AddPatient setOpenModal={setModalOpen} />}
+                    <i
+                      class="fa fa-trash"
+                      aria-hidden="true"
+                      // className="openModalBtn"
+                      // onClick={() => {
+                      //   setModalOpen(true)
+                      // }}
+                    >
+                      &nbsp;
+                    </i>
+                    {/* {modalOpen && <AddPatient setOpenModal={setModalOpen} />} */}
+                    <i class="fas fa-edit" onClick={() => setView(val)}></i>
+                  </div>
                 </td>
               </tr>
             )

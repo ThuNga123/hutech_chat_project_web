@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import '../../styles/Admin/Personnel.css'
 import img from '../../assets/images/abc.png'
+import AddPatient from './AddPatient'
+import { Button } from 'react-scroll'
 
 const data = [
   {
@@ -38,9 +40,77 @@ const data = [
 ]
 
 const Personnel = () => {
+  const [modalOpen, setModalOpen] = useState(false)
+  const [isView, setView] = useState([])
   return (
     <div className="containerPatient">
+      <div>
+        {isView.length != 0 ? (
+          <div className="info-p">
+            {console.log(isView)}
+            <div className="user-Details">
+              <div className="header">
+                <div className="panel">THÔNG TIN NHÂN VIÊN</div>
+                <button
+                  onClick={() => {
+                    setView([])
+                  }}
+                  className="exit"
+                >
+                  X
+                </button>
+              </div>
+              <hr />
+              <div className="user-left">
+                <form>
+                  <div className="title-v1">
+                    <i class="fa fa-user"> &nbsp;</i>
+                    Họ và tên:
+                    <span className="value-v1"> {isView.name}</span>
+                  </div>
+                  <div className="title-v1">
+                    <i class="fa fa-phone"> &nbsp;</i>
+                    Số điện thoại:
+                    <span className="value-v1"> {isView.phone}</span>
+                  </div>
+                  <div className="title-v1">
+                    <i class="far fa-calendar-alt"> &nbsp;</i>
+                    Địa chỉ:
+                    <span className="value-v1"> {isView.address}</span>
+                  </div>
+                </form>
+              </div>
+              <div className="user-right">
+                <div className="title-v1">
+                  <i class="far fa-clock"> &nbsp;</i>
+                  Giới tính:
+                  <span className="value-v1"> {isView.sex}</span>
+                </div>
+                <div className="title-v1">
+                  <i class="fa fa-envelope"> &nbsp;</i>
+                  Email:
+                  <span className="value-v1"> {isView.email}</span>
+                </div>
+                <div className="title-v1">
+                  <i class="fa fa-users"> &nbsp;</i>
+                  Chức vụ:
+                  <span className="value-v1">{isView.role}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : null}
+      </div>
       <div className="panel">QUẢN LÝ NHÂN VIÊN</div>
+      <button
+        className="openModalBtn"
+        onClick={() => {
+          setModalOpen(true)
+        }}
+      >
+        Thêm mới
+      </button>
+      {modalOpen && <AddPatient setOpenModal={setModalOpen} />}
       <table id="customers">
         <tr>
           <th>Hình ảnh</th>
@@ -71,7 +141,7 @@ const Personnel = () => {
                 <i class="fa fa-trash" aria-hidden="true">
                   &nbsp;
                 </i>
-                <i class="fas fa-edit"></i>
+                <i class="fas fa-edit" onClick={() => setView(val)}></i>
               </td>
             </tr>
           )
