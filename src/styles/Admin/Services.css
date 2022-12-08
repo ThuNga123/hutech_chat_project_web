@@ -185,9 +185,9 @@ hr {
 .openModalBtn-ser {
   width: 100px;
   height: 40px;
-  border: none;
+  border: none; 
   border-radius: 6px;
   background-color: cornflowerblue;
-  color: white;
+  color: white; 
   cursor: pointer;
 }

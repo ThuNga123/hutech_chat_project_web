@@ -3,6 +3,7 @@ import '../../styles/Admin/Services.css'
 import img from '../../assets/images/abc.png'
 import Delete from '../../components/Admin/Delete'
 import AddService from './AddService'
+import Update from './Update'
 
 const data = [
   {
@@ -63,6 +64,7 @@ const data = [
 const Services = () => {
   const [modalOpen, setModalOpen] = useState(false)
   const [modalDele, setModalDele] = useState(false)
+  const [modalUp, setModalUp] = useState(false)
   const [isView, setView] = useState([])
   return (
     <div className="containerPatient">
@@ -116,6 +118,15 @@ const Services = () => {
                 </div>
               </div>
             </div>
+            <button
+              className="openModalBtn-up"
+              onClick={() => {
+                setModalUp(true)
+              }}
+            >
+              Cập nhật
+            </button>
+            {modalUp && <Update setUpModal={setModalUp} />}
           </div>
         ) : null}
       </div>

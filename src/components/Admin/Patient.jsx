@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react'
 import AddPatient from './AddPatient'
 import '../../styles/Admin/patient.css'
 import Delete from './Delete'
+import Update from './Update'
 
 const Patient = () => {
   const [modalOpen, setModalOpen] = useState(false)
   const [modalDele, setModalDele] = useState(false)
+  const [modalUp, setModalUp] = useState(false)
   const data = [
     {
       userid: '1',
@@ -105,6 +107,15 @@ const Patient = () => {
                 </div>
               </div>
             </div>
+            <button
+              className="openModalBtn-up"
+              onClick={() => {
+                setModalUp(true)
+              }}
+            >
+              Cập nhật
+            </button>
+            {modalUp && <Update setUpModal={setModalUp} />}
           </div>
         ) : null}
       </div>

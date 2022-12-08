@@ -108,6 +108,15 @@
   text-align: justify;
 }
 
+.cnhat{
+  background-color:#04aa6d;
+  font-size: 20px;
+  color: white;
+  height: 40px;
+  width: 130px;
+  margin-left: 50px;
+}
+
 .user-right-per {
   display: inline-block;
   margin-left: 10px;
@@ -166,6 +175,16 @@ hr {
   cursor: pointer;
 }
 
+.openModalBtn-up {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: cornflowerblue;
+  color: white;
+  cursor: pointer;
+  margin-left: 70px;
+}
 
 .dele {
   width: 70px;
