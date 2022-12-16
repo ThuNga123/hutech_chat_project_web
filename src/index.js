@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
-import AppNavigator from "./router";
+import App from "./App";
+require("./config/firebaseConfig");
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AppNavigator />
+    <App />
   </React.StrictMode>
 );
 

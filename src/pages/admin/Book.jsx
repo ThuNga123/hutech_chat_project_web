@@ -72,7 +72,30 @@ const Book = () => {
 
   return (
     <div className="containerBook">
-      <div className="mainBox">
+      <div className="contentsv">
+        <div className="nameColumn">
+          <div className="column">Tên khách hàng</div>
+          <div className="column">Giờ Khám</div>
+          <div className="column">Trạng thái</div>
+          <div className="column">Chức năng</div>
+        </div>
+        <div className="itemsv">
+          <div className="row">
+            <div className="item">Đường Kim Yên</div>
+            <div className="item">09:00 06/12/2022</div>
+            <div className="item">Chờ xác nhận</div>
+            <div className="item">Xác nhận | Hủy</div>
+          </div>
+          <hr />
+          <div className="row">
+            <div className="item">Trần Văn Toản</div>
+            <div className="item">08:30 25/11/2022</div>
+            <div className="item">Đã xác nhận</div>
+            <div className="item">Hủy</div>
+          </div>
+        </div>
+      </div>
+      {/* <div className="mainBox">
         {isView.length != 0 ? (
           <div className="info">
             {console.log(isView)}
@@ -171,15 +194,11 @@ const Book = () => {
             ))}
 
             <Content active={active === 1}>
-              {/* <ReactTable
-                userInfo={userInfo}
-                columns={columns}
-                defaultPageSize={2}
-              /> */}
+             
             </Content>
           </>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

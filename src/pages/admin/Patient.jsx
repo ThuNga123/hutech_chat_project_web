@@ -36,7 +36,38 @@ const data = [
 const Patient = () => {
   return (
     <div className="containerPatient">
-      <table id="customers">
+      <div className="contentsv">
+        <div className="nameColumn">
+          <div className="column">Tên người dùng</div>
+          <div className="column">Số điện thoại</div>
+          <div className="column">Email</div>
+
+          <div className="column">Chức năng</div>
+        </div>
+        <div className="itemsv">
+          <div className="row">
+            <div className="item">Đường Kim Yên</div>
+            <div className="item">+8493222456</div>
+            <div className="item">duongkimyen@gmail.com</div>
+            <div className="item">Xóa | Khóa</div>
+          </div>
+          <hr />
+          <div className="row">
+            <div className="item">Nguyễn Khánh Hồng</div>
+            <div className="item">+8493332456</div>
+            <div className="item">nguyenkhanhhong@gmail.com</div>
+            <div className="item">Xóa | Khóa</div>
+          </div>
+          <hr />
+          <div className="row">
+            <div className="item">Trần Văn Toản</div>
+            <div className="item">+849333567</div>
+            <div className="item">tranvantoan@gmail.com</div>
+            <div className="item">Xóa | Khóa</div>
+          </div>
+        </div>
+      </div>
+      {/* <table id="customers">
         <tr>
           <th>Họ và tên</th>
           <th>Giới tính</th>
@@ -61,7 +92,7 @@ const Patient = () => {
             </tr>
           );
         })}
-      </table>
+      </table> */}
     </div>
   );
 };

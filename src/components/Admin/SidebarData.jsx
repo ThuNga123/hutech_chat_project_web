@@ -3,16 +3,16 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
 // import HomeAdmin from '../../screen/admin/HomeAdmin'
-import Services from "../../screen/admin/Services";
-import Patient from "../../screen/admin/Patient";
-import Personnel from "../../screen/admin/Personnel";
-import Book from "../../screen/admin/Book";
-import Home from "../Admin/Home";
+import Services from "../../pages/admin/Services";
+import Patient from "../../pages/admin/Patient";
+import Personnel from "../../pages/admin/Personnel";
+import Book from "../../pages/admin/Book";
+import Home from "./Home";
 
 export const SidebarData = [
   {
     title: "Trang chủ",
-    path: "/",
+    path: "/admin",
     icon: <AiIcons.AiFillHome />,
     cName: "nav-text",
     component: <Home />,

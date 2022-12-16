@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "../../styles/Authen/signIn.css";
-import { URL } from "../../dotenv";
+import { ADDRESS } from "../../dotenv";
 import Home from "../staff/Home";
 import HomeAdmin from "../admin/HomeAdmin";
-import { useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 
 import image from "../../assets/images/background.png";
 import panel from "../../assets/images/panel.jpg";
@@ -18,12 +18,14 @@ function SignIn() {
   }, []);
 
   const navigate = useNavigate();
+  const local = useLocation();
+  console.log(local);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (email !== "" && password !== "") {
       let result = {};
-      await fetch(URL + "signin", {
+      await fetch(ADDRESS + "signin", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -57,8 +59,8 @@ function SignIn() {
         localStorage.setItem("accessToken", true);
         console.log(localStorage.getItem("accessToken"));
         console.log(result.role);
-        if (result.role === "admin") {
-          navigate("/homeAdmin");
+        if (result.role == "admin") {
+          navigate("/admin");
         } else {
           navigate("/home");
         }

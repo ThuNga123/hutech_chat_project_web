@@ -1,4 +1,6 @@
-var URL = "http://localhost:9000/api/v1/";
+var ADDRESS = "http://localhost:9000/api/v1/";
+var URLIMG = "http://localhost:9000/imgs/";
 module.exports = {
-  URL,
+  ADDRESS,
+  URLIMG,
 };

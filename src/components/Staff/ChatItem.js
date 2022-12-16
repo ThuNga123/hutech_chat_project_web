@@ -1,24 +1,22 @@
 import React, { Component } from "react";
+import { useState } from "react";
 import Avatar from "./Avatar";
 
-export default class ChatItem extends Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <div
-        style={{ animationDelay: `0.8s` }}
-        className={`chat__item ${this.props.user ? this.props.user : ""}`}
-      >
-        <div className="chat__item__content">
-          <div className="chat__msg">{this.props.msg}</div>
-          <div className="chat__meta">
-            <span>16 phút trước</span>
-          </div>
+function ChatItem({ animationDelay, user, msg, image, createAt }) {
+  return (
+    <div
+      style={{ animationDelay: `0s` }}
+      className={`chat__item ${user ? user : ""}`}
+    >
+      <div className="chat__item__content">
+        <div className="chat__msg">{msg}</div>
+        <div className="chat__meta">
+          <span>{createAt}</span>
         </div>
-        <Avatar isOnline="active" image={this.props.image} />
       </div>
-    );
-  }
+      {user !== "me" ? <Avatar isOnline="active" image={image} /> : null}
+    </div>
+  );
 }
+
+export default ChatItem;

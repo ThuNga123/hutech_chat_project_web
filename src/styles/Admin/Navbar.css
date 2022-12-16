@@ -25,6 +25,7 @@
 }
 
 .nav-menu {
+  z-index: inherit;
   background-color: #002e48;
   width: 250px;
   height: 100vh;
@@ -33,7 +34,6 @@
   position: fixed;
   top: 0;
   left: -100%;
-  transition: 850ms;
   border: 1px solid;
 
   box-shadow: 5px 9px 8px #0f0f0f;
@@ -41,7 +41,6 @@
 
 .nav-menu.active {
   left: 0;
-  transition: 450ms;
 }
 
 .nav-text {
